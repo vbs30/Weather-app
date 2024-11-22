@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 0px 20px rgb(125, 125, 125);
+}
+
+.logocomb {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 180px;
+    height: 100px;
+    margin-top: -25px;
+}
+
+ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    width: 400px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.navbar ul .header {
+    margin-top: 10px;
+}
+
+.container {
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    margin-top: 20px;
+    margin-left: 570px;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.search-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box input {
+    color: #06283D;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+.search-box input::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search-box button:hover {
+    color: #fff;
+    background: #06283D;
+}
+
+.search-box i {
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+
+.weather-box {
+    text-align: center;
+}
+
+.weather-box img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+.weather-box .temperature {
+    position: relative;
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+.weather-box .temperature span {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.weather-box .description {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather-details .humidity,
+.weather-details .wind {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+.weather-details .humidity {
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind {
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.weather-details i {
+    color: #06283D;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.weather-details span {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.weather-details p {
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.not-found img {
+    width: 70%;
+}
+
+.not-found p {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.weather-box,
+.weather-details {
+    scale: 0;
+    opacity: 0;
+}
+
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+/* Modify your existing navbar styles */
+.navbar {
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 0px 20px rgb(125, 125, 125);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.navbar ul li {
+    width: auto;
+    margin: 10px;
+    padding: 15px;
+}
+
+.logocomb {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 180px;
+    height: 100px;
+    margin-top: -25px;
+}
+
+.navbar ul .header {
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .navbar {
+        height: 80px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 70px;
+        margin-top: 0;
+    }
+
+    .navbar ul .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .weather-box .temperature {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        height: 100vh;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar ul {
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 60px;
+    }
+
+    .navbar ul .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .navbar ul li {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .search-box input {
+        font-size: 18px;
+        padding-left: 25px;
+    }
+
+    .search-box input::placeholder {
+        font-size: 16px;
+    }
+
+    .search-box button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .search-box i {
+        font-size: 22px;
+    }
+
+    .weather-box .temperature {
+        font-size: 2.5rem;
+    }
+
+    .weather-box .description {
+        font-size: 18px;
+    }
+
+    .weather-details .humidity,
+    .weather-details .wind {
+        height: 80px;
+    }
+
+    .weather-details i {
+        font-size: 22px;
+    }
+
+    .weather-details span {
+        font-size: 18px;
+    }
+
+    .weather-details p {
+        font-size: 12px;
+    }
+
+    .not-found p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .navbar ul .header h1 {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 80px;
+        height: 50px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .search-box input {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .weather-box .temperature {
+        font-size: 2rem;
+    }
+
+    .weather-details i {
+        font-size: 20px;
+    }
+
+    .weather-details span {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container {
+        margin-bottom: 20px;
+    }
+
+    .weather-box img {
+        width: 50%;
+        margin-top: 20px;
+    }
+}
+
+.container.expanded {
+    height: auto;
+    min-height: 105px;
+}
